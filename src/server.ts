@@ -1,9 +1,8 @@
-import express, { Request, Response} from "express";
+import express from "express";
+import  helloWorldRoute  from "./routes/helloWorldRoute";
 
 const app = express();
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
-});
+app.use(helloWorldRoute);
 
 export default app;
